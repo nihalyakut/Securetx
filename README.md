@@ -29,3 +29,11 @@ This project is designed to demonstrate how to safely move money in a distribute
 Naive implementations fail under concurrency: two requests can spend the same balance at the same time.
 SecureTX solves this using database-level locks, idempotency keys and strict transaction boundaries.
 
+## AWS Deployment Architecture
+
+The application is deployed on AWS using the following architecture:
+
+- Spring Boot application running on EC2
+- PostgreSQL database hosted on RDS
+- Nginx used as reverse proxy
+- Network isolated using VPC and security groups
